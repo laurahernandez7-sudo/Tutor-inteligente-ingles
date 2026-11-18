@@ -1,4 +1,7 @@
-/* Banco de 18 preguntas originales, agrupadas por habilidad y nivel. */
+/* Banco de ejercicios de inglés básico A1.
+   3 temas × 3 dificultades × 2 preguntas = 18 preguntas.
+   Todas las preguntas se escribieron para este prototipo. */
+
 const PREGUNTAS = [
   {
     "id": "V01",
@@ -271,4 +274,8 @@ const PREGUNTAS = [
     "explicacion": "En presente simple con plural usamos 'study'."
   }
 ];
-if(typeof module!=="undefined") module.exports=PREGUNTAS;
+
+// Permite usar el mismo banco en las pruebas con Node.js.
+if (typeof module !== "undefined") {
+  module.exports = PREGUNTAS;
+}

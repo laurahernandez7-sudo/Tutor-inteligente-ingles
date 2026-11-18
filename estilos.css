@@ -1,1 +1,93 @@
-*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:#263348;font-family:'Segoe UI',Arial,sans-serif;line-height:1.53}header{background:linear-gradient(115deg,#17375f,#18597a);color:#fff;padding:28px 18px}header>div,main,footer{max-width:970px;margin:auto}.marca{font-size:.78rem;letter-spacing:1.1px;font-weight:700;color:#a4dce8}h1{margin:5px 0 7px;font-size:2rem}header p{margin:0;color:#deedf6}main{padding:24px 15px 45px}.tarjeta{background:#fff;border:1px solid #e1e6ed;border-radius:15px;padding:25px;margin-bottom:20px;box-shadow:0 7px 22px #142f4909}h2{color:#163b60;margin:0 0 13px;font-size:1.42rem}h3{color:#163b60}.muted{color:#647285}.nota{border-left:4px solid #3397b1;background:#eaf8fb;padding:12px 14px;margin:16px 0;border-radius:3px}.mini{font-size:.86rem}label{font-weight:600}input{display:block;width:min(100%,380px);border:1px solid #c1ccd9;border-radius:8px;padding:12px;margin:9px 0 18px;font-size:1rem}button{cursor:pointer;border:0;border-radius:8px;padding:12px 17px;font-size:1rem;font-weight:650}button:focus-visible{outline:3px solid #ffc56c;outline-offset:2px}.principal{background:#135e8e;color:#fff}.secundario{background:#e8eef4;color:#223f59}.opcion{width:100%;display:block;margin:9px 0;text-align:left;background:#f6f9fc;border:1px solid #cad9e6;color:#1c3753}.opcion:hover:enabled{background:#e8f5fd}.opcion:disabled{cursor:default}.opcion.correcta{background:#def5e6;border-color:#319268}.opcion.incorrecta{background:#ffe8ea;border-color:#bb4c57}.indicadores{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.indicadores>div{background:#fff;border:1px solid #e1e6ed;border-radius:11px;padding:14px}.indicadores span{display:block;font-size:.85rem;color:#647285}.indicadores strong{font-size:1.3rem;color:#17375f}.habilidades{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-bottom:18px}.habilidades>div{border-radius:11px;background:#fff;border:1px solid #e1e6ed;padding:14px}.habilidades strong{color:#123f63;float:right}.barra-base{clear:both;background:#e4ecf4;border-radius:20px;height:8px;overflow:hidden;margin-top:10px}.barra{background:#2692b0;height:100%;width:30%;transition:width .25s}.pregunta{background:#f1f6fc;color:#173b61;font-weight:700;font-size:1.35rem;padding:18px;border-radius:9px;margin:16px 0}.chip{display:inline-block;background:#e8f0f7;color:#174d73;border-radius:20px;padding:4px 10px;font-size:.82rem;font-weight:700;margin-right:5px}.bien{color:#117245}.mal{color:#ae3941}.acciones{display:flex;gap:10px;flex-wrap:wrap;margin-top:20px}.tablero{overflow-x:auto}table{width:100%;border-collapse:collapse;font-size:.9rem}td,th{border-bottom:1px solid #e0e7ef;padding:10px;text-align:left}th{background:#f0f5fb}footer{padding:0 15px 28px;color:#738092;font-size:.83rem}[hidden]{display:none!important}@media(max-width:700px){.habilidades{grid-template-columns:1fr}.indicadores{grid-template-columns:repeat(3,1fr)}.tarjeta{padding:17px}h1{font-size:1.6rem}}
+/* EnglishStep - estilos de la página. CSS sencillo, sin librerías externas. */
+:root {
+  --azul: #204c70;
+  --azul-claro: #eaf2f8;
+  --turquesa: #197f86;
+  --texto: #233447;
+  --gris: #667688;
+  --borde: #dbe4ea;
+}
+
+* { box-sizing: border-box; }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  background: #f4f7fa;
+  color: var(--texto);
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.55;
+}
+.contenedor { max-width: 930px; margin: 0 auto; padding-left: 22px; padding-right: 22px; }
+.encabezado { background: #204c70; color: white; padding: 28px 0 34px; }
+.encabezado h1 { font-size: 2.45rem; line-height: 1.2; margin: 8px 0; letter-spacing: -1px; }
+.encabezado h1 span { color: #90e0dc; }
+.encabezado p { margin: 4px 0 0; color: #e4eff5; }
+.eyebrow { font-size: 0.75rem; letter-spacing: 1px; font-weight: 700; color: #b0e3ea; }
+main.contenedor { padding-top: 26px; padding-bottom: 30px; }
+.tarjeta {
+  background: white;
+  border: 1px solid var(--borde);
+  border-radius: 14px;
+  padding: 26px;
+  margin-bottom: 18px;
+  box-shadow: 0 3px 12px rgba(28, 60, 82, .04);
+}
+.tarjeta h2 { margin: 0 0 10px; font-size: 1.45rem; color: var(--azul); }
+.tarjeta h3 { margin-top: 21px; color: var(--azul); }
+.etiqueta { color: var(--turquesa); font-size: 0.77rem; font-weight: 800; letter-spacing: 1.1px; margin: 0 0 10px; }
+.datos-rapidos { display: flex; flex-wrap: wrap; gap: 9px; margin: 21px 0; }
+.datos-rapidos span { padding: 5px 11px; background: var(--azul-claro); color: var(--azul); border-radius: 18px; font-size: .85rem; }
+label { display: block; font-weight: 650; margin: 12px 0 7px; }
+input {
+  width: min(100%, 390px); display: block;
+  padding: 12px; border: 1px solid #b9c8d5; border-radius: 9px;
+  font-size: 1rem; margin-bottom: 16px;
+}
+button { font-family: inherit; font-size: 0.97rem; cursor: pointer; }
+.boton { padding: 11px 19px; border: 0; border-radius: 8px; font-weight: 700; }
+.principal { background: var(--azul); color: #fff; }
+.principal:hover { background: #143752; }
+.secundario { background: #e8eef2; color: var(--azul); }
+.secundario:hover { background: #dbe8f0; }
+button:focus-visible { outline: 3px solid #eab657; outline-offset: 3px; }
+.aviso { max-width: 680px; color: var(--gris); font-size: .85rem; margin: 20px 0 0; }
+.indicadores { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin-bottom: 16px; }
+.indicador { padding: 14px 18px; background: #fff; border: 1px solid var(--borde); border-radius: 11px; }
+.indicador span, .resumen span { display: block; color: var(--gris); font-size: .84rem; }
+.indicador strong { display: block; margin-top: 3px; font-size: 1.1rem; color: var(--azul); }
+.cabecera-seccion { display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+.cabecera-seccion small { color: var(--gris); }
+.habilidades { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.barra-texto { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: .89rem; }
+.barra-texto strong { color: var(--azul); }
+.barra-base { background: #e2eaf0; border-radius: 99px; overflow: hidden; height: 10px; margin-top: 10px; }
+.barra { width: 30%; height: 100%; background: var(--turquesa); transition: width .25s; }
+.chips { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.chip { color: #175d66; background: #e2f3f1; border-radius: 18px; padding: 4px 11px; font-size: .82rem; font-weight: 700; }
+.chip-nivel { color: var(--azul); background: #eaf0f8; }
+.ejercicio h2 { margin: 12px 0 17px; padding: 19px; background: #eff5f9; border-radius: 9px; font-size: 1.30rem; }
+.opciones { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+.opcion { text-align: left; border: 1px solid #cad9e3; background: #fbfdff; border-radius: 9px; padding: 12px; color: var(--texto); }
+.opcion:hover:enabled { background: #edf6fb; }
+.opcion:disabled { cursor: default; }
+.opcion.correcta { background: #dcf2e5; border-color: #29915e; }
+.opcion.incorrecta { background: #fde9e9; border-color: #c56262; }
+.pista-texto { margin: 18px 0; padding: 12px 14px; background: #f2f7f9; border-left: 4px solid #73a8b4; border-radius: 3px; font-size: .92rem; }
+.retro { margin: 16px 0; border-radius: 8px; background: #f5f8fb; padding: 12px 14px; }
+.retro p { margin: 5px 0; }
+.acierto { color: #127047; }
+.error { color: #aa3b3b; }
+.acciones { display: flex; gap: 10px; flex-wrap: wrap; margin-top: 19px; }
+.resumen { display: flex; gap: 14px; flex-wrap: wrap; margin: 18px 0; }
+.resumen div { background: var(--azul-claro); border-radius: 10px; padding: 14px 20px; min-width: 170px; }
+.resumen strong { font-size: 1.8rem; color: var(--azul); }
+.tabla-wrap { overflow-x: auto; }
+table { border-collapse: collapse; width: 100%; font-size: .88rem; }
+th, td { padding: 11px; text-align: left; border-bottom: 1px solid var(--borde); }
+th { background: #edf3f8; color: var(--azul); }
+footer { color: var(--gris); padding-bottom: 28px; font-size: .82rem; }
+@media (max-width: 650px) {
+  .tarjeta { padding: 18px; }
+  .habilidades, .indicadores, .opciones { grid-template-columns: 1fr; }
+  .encabezado h1 { font-size: 2.05rem; }
+}

@@ -1,49 +1,59 @@
-# EnglishStep — tutor inteligente adaptativo de inglés
+# EnglishStep — tutor adaptativo de inglés básico A1
 
-Prototipo académico de cuarto semestre, creado con **HTML, CSS y JavaScript** para practicar tres contenidos de inglés básico: vocabulario, verbo *to be* y presente simple.
+Proyecto académico de cuarto semestre, asignatura **Sistemas Inteligentes**, Universidad de Ibagué.
 
-## Ejecutar
+**Autoras:** Laura Sofía Hernández Martínez y María Fernanda Rodríguez.  
+**Docente (última autora del informe):** Alexandra LaCruz.
 
-Abrir `index.html` con un navegador de escritorio. También está disponible el archivo autónomo `DEMO_ABRIR_EN_NAVEGADOR.html`.
+## ¿Qué problema resuelve?
 
-## Qué hace el software
+Un cuestionario común presenta siempre la misma dificultad. EnglishStep estima de forma sencilla el desempeño por tema para ajustar la dificultad de la siguiente pregunta y dar pistas y explicaciones.
 
-- Banco de **18 preguntas** originales: 3 temas × 3 dificultades × 2 preguntas.
-- Una sesión de **9 preguntas**: 3 por tema.
-- Tras cada respuesta, **Bayesian Knowledge Tracing (BKT)** actualiza una estimación de conocimiento por tema.
-- Elige la dificultad mediante reglas: `p < 0.45` = básico, `0.45 <= p < 0.75` = intermedio, `p >= 0.75` = avanzado.
-- Muestra pistas y explicaciones, registra las respuestas y ofrece exportar un CSV.
+## ¿Qué incluye?
 
-Parámetros didácticos: `P(L0)=0.30`, `P(T)=0.10`, `P(S)=0.10`, `P(G)=0.20`. No fueron entrenados ni calibrados con estudiantes reales.
+- **18 preguntas originales**, sobre vocabulario, verbo *to be* y presente simple (6 por tema).
+- **9 preguntas por práctica**, alternando los tres temas.
+- **BKT (Bayesian Knowledge Tracing)** con parámetros didácticos para cada tema.
+- Tres dificultades **dentro del material A1**: básico, intermedio y avanzado. No corresponden a A1/A2/B1.
+- Retroalimentación inmediata, pistas, resumen y exportación CSV.
+- **No utiliza IA generativa**, no está conectado a Moodle y no certifica inglés.
 
-## Archivos
+## ¿Cómo abrirlo?
 
-- `index.html`: pantalla del tutor.
-- `estilos.css`: diseño de la página.
-- `preguntas.js`: banco de ejercicios.
-- `tutor.js`: actualización BKT y reglas de selección; también controla la interfaz.
-- `datos/`: CSV con preguntas y resultados sintéticos.
-- `pruebas/`: pruebas automáticas y script que reproduce los escenarios simulados.
-- `informe/`: documento técnico en Word y PDF.
-- `presentacion/`: material de sustentación.
+1. Descarga todos los archivos y deja `index.html`, `estilos.css`, `preguntas.js` y `tutor.js` juntos.
+2. Haz doble clic en `index.html` con Edge o Chrome.
+3. Introduce un alias opcional y realiza una práctica de nueve preguntas.
+4. Al terminar, descarga `registro_tutor_ingles.csv`.
 
-## Pruebas reproducibles
+No se instala nada ni se requiere Internet. También se incluye un archivo autónomo `ABRIR_ENGLISHSTEP.html` en la entrega completa.
 
-Teniendo Node.js, desde esta carpeta ejecutar:
+## ¿Dónde está la inteligencia?
 
-```sh
+En `tutor.js` se encuentran las funciones:
+
+- `actualizarBKT`: calcula la nueva estimación después de cada respuesta.
+- `elegirNivel`: compara la estimación con los umbrales 45 % y 75 %.
+- `elegirPregunta`: busca una pregunta sin repetir, de dificultad acorde con la estimación.
+
+Parámetros ilustrativos: `P(L0)=0.30`, `P(T)=0.10`, `P(S)=0.10` y `P(G)=0.20`. **No fueron ajustados con estudiantes reales.**
+
+## ¿Cómo verificar el código?
+
+Con Node.js opcional, ejecutar desde la carpeta raíz:
+
+```bash
 node pruebas/validar.js
 node pruebas/simular.js
 ```
 
-`validar.js` comprueba nueve condiciones y `simular.js` reproduce tres perfiles ficticios (27 respuestas en total). **No son datos de estudiantes reales** ni demuestran aumento de aprendizaje.
+`validar.js` comprueba diez comprobaciones de la implementación; `simular.js` genera tres perfiles simulados de nueve respuestas cada uno (27 interacciones). Las pruebas verifican comportamiento de software, **no mejoras del aprendizaje real**.
+
+## Datos y enlaces
+
+- Código: https://github.com/laurahernandez7-sudo/Tutor-inteligente-de-ingles
+- Datos: https://drive.google.com/drive/folders/16ehLLxjAKKG1AFCxIvfNg58m9niRTtuj?usp=sharing
+- Referencias y metodología: informe técnico incluido en el paquete de entrega.
 
 ## Límites
 
-EnglishStep no certifica niveles MCER, no guarda progreso de un día a otro, no ofrece conversación libre ni análisis de pronunciación y no se conecta a Moodle o Canvas. Está diseñado como una demostración de adaptación de dificultad dentro de una sesión.
-
-## Referencias
-
-1. Corbett, A. T. y Anderson, J. R., *Knowledge tracing: Modeling the acquisition of procedural knowledge*, 1994. https://doi.org/10.1007/BF01099821
-2. Piech, C. et al., *Deep Knowledge Tracing*, NeurIPS 2015. https://proceedings.neurips.cc/paper_files/paper/2015/hash/bac9162b47c56fc8a4d2a519803d51b3-Abstract.html
-3. Council of Europe, *CEFR Descriptors*. https://www.coe.int/en/web/common-european-framework-reference-languages/cefr-descriptors
+No diagnostica nivel CEFR real, no almacena progreso entre días, no corrige pronunciación ni texto libre, no conversa y no integra un LMS. Se trata de un prototipo pequeño y reproducible para demostrar adaptación por tema.

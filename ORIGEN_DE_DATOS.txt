@@ -1,0 +1,7 @@
+DATOS DE ENGLISHSTEP
+
+preguntas_ingles_a1.csv: 18 ejercicios preparados para el prototipo, con cuatro opciones, respuesta correcta, pista y explicación.
+pruebas_simuladas.csv: 27 interacciones generadas con escenarios ficticios mediante `node pruebas/simular.js`.
+resumen_pruebas.csv: 3 filas que resumen el estado final de cada escenario simulado.
+
+Las simulaciones NO proceden de alumnos reales. No hay datos personales ni experimento controlado. Los porcentajes describen el estado de un modelo BKT con parámetros ilustrativos, no puntuaciones de evaluación ni exactitud del sistema.
