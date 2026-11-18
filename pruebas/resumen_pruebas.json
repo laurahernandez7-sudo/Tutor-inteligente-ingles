@@ -1,0 +1,29 @@
+[
+  {
+    "perfil": "Aciertos constantes",
+    "aciertos": 9,
+    "preguntas": 9,
+    "vocabulario": 98.28,
+    "to_be": 98.28,
+    "presente_simple": 98.28,
+    "promedio": 98.28
+  },
+  {
+    "perfil": "Errores constantes",
+    "aciertos": 0,
+    "preguntas": 9,
+    "vocabulario": 11.49,
+    "to_be": 11.49,
+    "presente_simple": 11.49,
+    "promedio": 11.49
+  },
+  {
+    "perfil": "Respuestas variadas",
+    "aciertos": 5,
+    "preguntas": 9,
+    "vocabulario": 69.06,
+    "to_be": 19.68,
+    "presente_simple": 69.06,
+    "promedio": 52.6
+  }
+]

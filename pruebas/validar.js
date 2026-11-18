@@ -1,0 +1,12 @@
+const assert=require('assert');const core=require('../tutor.js');const qs=require('../preguntas.js');
+let n=0;const test=(name,fn)=>{fn();console.log('OK',name);n++};
+test('18 preguntas',()=>assert.equal(qs.length,18));
+test('3 temas x 3 niveles x 2 preguntas',()=>{for(const t of core.TEMAS)for(const l of ['basico','medio','avanzado'])assert.equal(qs.filter(q=>q.tema===t&&q.nivel===l).length,2)});
+test('Respuestas y opciones validas',()=>{for(const q of qs){assert.equal(q.opciones.length,4);assert(Number.isInteger(q.correcta)&&q.correcta>=0&&q.correcta<4);assert(q.pista&&q.explicacion)}});
+test('BKT: acierto sube la estimacion',()=>assert(core.actualizarBKT(.3,true)>.3));
+test('BKT: error baja la estimacion inicial',()=>assert(core.actualizarBKT(.3,false)<.3));
+test('BKT: resultados entre 0 y 1',()=>{for(const p of [0,.1,.3,.5,.9,1])for(const a of [true,false]){let x=core.actualizarBKT(p,a);assert(x>=0&&x<=1)}});
+test('Seleccion adapta los niveles',()=>{assert.equal(core.seleccionar(qs,[],'to_be',.3).nivel,'basico');assert.equal(core.seleccionar(qs,[],'to_be',.55).nivel,'medio');assert.equal(core.seleccionar(qs,[],'to_be',.9).nivel,'avanzado')});
+test('3 temas se alternan',()=>{assert.deepEqual([0,1,2,3,4,5].map(core.temaPara),['vocabulario','to_be','presente_simple','vocabulario','to_be','presente_simple'])});
+test('9 preguntas distintas en sesion',()=>{let d={vocabulario:.3,to_be:.3,presente_simple:.3},usados=[];for(let i=0;i<9;i++){const t=core.temaPara(i),q=core.seleccionar(qs,usados,t,d[t]);assert(q&&!usados.includes(q.id));usados.push(q.id);d[t]=core.actualizarBKT(d[t],true)}assert.equal(usados.length,9)});
+console.log(`${n} pruebas superadas`);

@@ -1,0 +1,19 @@
+﻿id,tema,nivel,pregunta,opcion_a,opcion_b,opcion_c,opcion_d,correcta_indice,pista,explicacion
+V01,vocabulario,basico,What does 'apple' mean in Spanish?,Manzana,Naranja,Libro,Puerta,0,Es una fruta roja o verde.,'Apple' significa 'manzana'.
+V02,vocabulario,basico,Choose the English word for 'casa'.,Chair,House,School,Street,1,Es el lugar donde vive una familia.,'Casa' se dice 'house'.
+V03,vocabulario,medio,Complete: 'I drink ____ every morning.',window,water,teacher,blue,1,Busca una palabra que nombre una bebida.,'Water' significa 'agua' y puede beberse.
+V04,vocabulario,medio,What is the opposite of 'big'?,Long,Small,Happy,Fast,1,'Big' significa 'grande'.,El antónimo de 'big' es 'small' (pequeño).
+V05,vocabulario,avanzado,Complete: 'The bank is ____ the supermarket.',next to,hungry,yesterday,reading,0,Necesitas una expresión de ubicación.,'Next to' indica que dos lugares están uno al lado del otro.
+V06,vocabulario,avanzado,Complete: 'I am hungry. I want something to ____.',eat,sleep,listen,drive,0,'Hungry' indica que una persona tiene hambre.,La expresión 'something to eat' se usa para algo de comer.
+B01,to_be,basico,Complete: 'She ___ a student.',am,are,is,be,2,Con she se usa la tercera persona singular.,Con 'she' corresponde 'is': She is a student.
+B02,to_be,basico,Complete: 'I ___ from Colombia.',is,am,are,be,1,'I' lleva una forma especial de 'to be'.,Con 'I' se usa 'am': I am from Colombia.
+B03,to_be,medio,Complete: 'They ___ not at home.',is,am,are,be,2,'They' es plural.,Con 'they' se usa 'are': They are not at home.
+B04,to_be,medio,Complete the question: '___ he your brother?',Are,Am,Is,Do,2,Las preguntas con to be invierten verbo y sujeto.,La pregunta correcta es 'Is he your brother?'.
+B05,to_be,avanzado,Choose the correct negative sentence.,We not are late.,We are not late.,We is not late.,We do not are late.,1,La negación va después de 'are'.,La oración correcta es 'We are not late'.
+B06,to_be,avanzado,Complete: 'My friends and I ___ ready for class.',is,am,are,be,2,El sujeto equivale a we.,'My friends and I' es plural: are ready.
+P01,presente_simple,basico,Complete: 'I ___ English every day.',studies,study,studying,studied,1,Con I el verbo va en su forma base.,En presente simple: 'I study English every day'.
+P02,presente_simple,basico,Complete: 'He ___ soccer on Sundays.',play,playing,plays,played,2,"Con he, los verbos regulares llevan -s.",'He plays soccer on Sundays' es correcto.
+P03,presente_simple,medio,Complete: 'She ___ coffee in the morning.',don't drink,doesn't drink,doesn't drinks,not drink,1,Con she se usa doesn't + verbo base.,La negación correcta es 'She doesn't drink coffee'.
+P04,presente_simple,medio,Complete: '___ you like music?',Does,Are,Do,Is,2,Las preguntas en presente simple con you usan un auxiliar.,'Do you like music?' es la forma correcta.
+P05,presente_simple,avanzado,Choose the correct sentence.,My brother go to university every day.,My brother goes to university every day.,My brother going to university every day.,My brother does goes to university every day.,1,"En tercera persona singular, go cambia a goes.",En tercera persona singular se dice 'goes'.
+P06,presente_simple,avanzado,Complete: 'The students ___ English on Mondays.',studies,studying,study,does study,2,'The students' es un sujeto plural.,En presente simple con plural usamos 'study'.
